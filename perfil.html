@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HunterTracker — Perfil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="perfil.css" rel="stylesheet" />
+</head>
+<body>
+<nav aria-label="Navegação principal">
+  <a href="dashboard.html" class="nav-logo">
+    <img src="img/logo-ht.png?v=2" alt="HunterTracker" class="ht-logo-icon" />
+    <span class="nav-brand">HUNTER<span>TRACKER</span></span>
+  </a>
+  <div class="nav-search" role="search">
+    <svg width="11" height="11" fill="none" stroke="#7b8ab8" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <label for="nav-search-input" class="sr-only">Pesquisar jogador</label>
+    <input id="nav-search-input" type="text" placeholder="Pesquisar jogador..." />
+    <button class="nav-buscar" type="button">Buscar</button>
+  </div>
+  <div class="nav-links">
+    <a href="campeonatos.html">Campeonatos</a>
+    <a href="rankings.html">Rankings</a>
+    <a href="perfil.html" class="active" aria-current="page">Minha Conta</a>
+    <a href="planos.html">Planos</a>
+  </div>
+</nav>
+<main class="page">
+  <!-- PROFILE BANNER -->
+  <div class="profile-banner">
+    <div class="profile-banner-left">
+      <div class="big-avatar">B</div>
+      <div>
+        <div class="profile-name">Bicoibauduco</div>
+        <div class="profile-tags">
+          <span class="ptag ptag-game">FORTNITE · 1.023</span>
+          <span class="ptag ptag-kd">K/D 1.91</span>
+          <span class="ptag ptag-rank">#8 Ranking</span>
+        </div>
+      </div>
+    </div>
+    <div class="profile-banner-right">
+      <button class="btn-edit">Editar Perfil</button>
+      <button class="btn-follow">Compartilhar</button>
+    </div>
+  </div>
+  <div class="tabs">
+    <a class="tab active" href="#panel-est">Estatísticas</a>
+    <a class="tab" href="#panel-his">Histórico</a>
+  </div>
+  <div class="main-grid">
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <!-- Campeonatos -->
+      <div class="panel-card">
+        <div class="panel-card-title">Campeonatos</div>
+        <div class="mini-stats">
+          <div class="mini-stat">
+            <div class="mini-label">Jogados</div>
+            <div class="mini-val">18</div>
+          </div>
+          <div class="mini-stat">
+            <div class="mini-label">Partidas</div>
+            <div class="mini-val accent">240</div>
+          </div>
+        </div>
+      </div>
+      <!-- Vitórias e K/D -->
+      <div class="panel-card">
+        <div class="panel-card-title">Performance</div>
+        <div class="mini-stats" style="margin-bottom:10px;">
+          <div class="mini-stat">
+            <div class="mini-label">Vitórias</div>
+            <div class="mini-val">95</div>
+          </div>
+          <div class="mini-stat">
+            <div class="mini-label">K/D</div>
+            <div class="mini-val accent">1.91</div>
+          </div>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Kills totais</span>
+          <span class="stat-val">626</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Deaths</span>
+          <span class="stat-val">328</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Assistências</span>
+          <span class="stat-val">233</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Taxa de vitória</span>
+          <span class="stat-val green">39.6%</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Posição atual</span>
+          <span class="stat-val accent">#8</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Pontuação</span>
+          <span class="stat-val accent">118 pts</span>
+        </div>
+      </div>
+    </div>
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <!-- Estatísticas panel -->
+      <div id="panel-est">
+        <div class="recent-title">Estatísticas Recentes</div>
+        <!-- Performance chart -->
+        <div class="chart-card">
+          <div class="chart-title">K/D por Partida — Últimas 8 Rodadas</div>
+          <div class="chart-area">
+            <div class="chart-bar" style="height:65%" title="2.1"></div>
+            <div class="chart-bar" style="height:80%" title="2.6"></div>
+            <div class="chart-bar" style="height:55%" title="1.8"></div>
+            <div class="chart-bar" style="height:90%" title="3.2"></div>
+            <div class="chart-bar" style="height:45%" title="1.4"></div>
+            <div class="chart-bar" style="height:75%" title="2.4"></div>
+            <div class="chart-bar" style="height:85%" title="2.9"></div>
+            <div class="chart-bar" style="height:60%; opacity:1; background: linear-gradient(180deg, #00d4ff, #1a4db5);" title="1.91"></div>
+          </div>
+          <div class="chart-labels">
+            <div class="chart-label">R1</div>
+            <div class="chart-label">R2</div>
+            <div class="chart-label">R3</div>
+            <div class="chart-label">R4</div>
+            <div class="chart-label">R5</div>
+            <div class="chart-label">R6</div>
+            <div class="chart-label">R7</div>
+            <div class="chart-label" style="color:var(--cyan);">Atual</div>
+          </div>
+        </div>
+        <!-- Recent stats table -->
+        <div class="recent-title" style="font-size:13px;">Estatísticas Recentes</div>
+        <div class="stats-table">
+          <div class="st-head">
+            <span>#</span><span>Player</span><span>K/D</span><span>Partidas</span><span>Vitórias</span>
+          </div>
+          <div class="st-row">
+            <div class="st-num">1</div>
+            <div class="st-player">
+              <div class="st-av" style="background:linear-gradient(135deg,#0a1a50,#1a3a90);border-color:rgba(0,212,255,.3);"></div>
+              <div><div class="st-name">Bicoibauduco</div><div class="st-game">Fortnite</div></div>
+            </div>
+            <div class="st-val acc">3.20</div><div class="st-val">48</div><div class="st-val good">19</div>
+          </div>
+          <div class="st-row">
+            <div class="st-num">2</div>
+            <div class="st-player">
+              <div class="st-av"></div>
+              <div><div class="st-name">Player2</div><div class="st-game">Valorant</div></div>
+            </div>
+            <div class="st-val">1.95</div><div class="st-val">60</div><div class="st-val">22</div>
+          </div>
+          <div class="st-row">
+            <div class="st-num">3</div>
+            <div class="st-player">
+              <div class="st-av"></div>
+              <div><div class="st-name">Player3</div><div class="st-game">CS2</div></div>
+            </div>
+            <div class="st-val">0.83</div><div class="st-val">35</div><div class="st-val">11</div>
+          </div>
+          <div class="st-row">
+            <div class="st-num">4</div>
+            <div class="st-player">
+              <div class="st-av"></div>
+              <div><div class="st-name">Player4</div><div class="st-game">Fortnite</div></div>
+            </div>
+            <div class="st-val">1.53</div><div class="st-val">42</div><div class="st-val">15</div>
+          </div>
+        </div>
+      </div>
+      <!-- Histórico panel -->
+      <div id="panel-his">
+        <div class="recent-title">Histórico de Partidas</div>
+        <div class="history-row">
+          <div class="history-left">
+            <div class="history-game-badge hbg-val">VL</div>
+            <div>
+              <div class="history-name">Valorant Champions — Rodada 4</div>
+              <div class="history-meta">Hoje · 14:30 · Mapa: Haven</div>
+            </div>
+          </div>
+          <div class="history-result">
+            <div class="result-badge win">Vitória</div>
+            <div class="history-kd">K/D 3.2 · 18/8/6</div>
+          </div>
+        </div>
+        <div class="history-row">
+          <div class="history-left">
+            <div class="history-game-badge hbg-val">VL</div>
+            <div>
+              <div class="history-name">Valorant Champions — Rodada 3</div>
+              <div class="history-meta">Ontem · 19:00 · Mapa: Bind</div>
+            </div>
+          </div>
+          <div class="history-result">
+            <div class="result-badge loss">Derrota</div>
+            <div class="history-kd">K/D 1.4 · 12/11/4</div>
+          </div>
+        </div>
+        <div class="history-row">
+          <div class="history-left">
+            <div class="history-game-badge hbg-fn">FN</div>
+            <div>
+              <div class="history-name">Fortnite Solo — Qualificatória</div>
+              <div class="history-meta">12/06 · 16:00</div>
+            </div>
+          </div>
+          <div class="history-result">
+            <div class="result-badge win">Top 5</div>
+            <div class="history-kd">8 eliminações</div>
+          </div>
+        </div>
+        <div class="history-row">
+          <div class="history-left">
+            <div class="history-game-badge hbg-val">VL</div>
+            <div>
+              <div class="history-name">Valorant Champions — Rodada 2</div>
+              <div class="history-meta">10/06 · 20:00 · Mapa: Ascent</div>
+            </div>
+          </div>
+          <div class="history-result">
+            <div class="result-badge win">Vitória</div>
+            <div class="history-kd">K/D 2.8 · 21/10/7</div>
+          </div>
+        </div>
+        <div class="history-row">
+          <div class="history-left">
+            <div class="history-game-badge hbg-val">VL</div>
+            <div>
+              <div class="history-name">Valorant Champions — Rodada 1</div>
+              <div class="history-meta">08/06 · 15:00 · Mapa: Pearl</div>
+            </div>
+          </div>
+          <div class="history-result">
+            <div class="result-badge win">Vitória</div>
+            <div class="history-kd">K/D 4.1 · 25/8/9</div>
+          </div>
+        </div>
+        <div class="history-row">
+          <div class="history-left">
+            <div class="history-game-badge hbg-fn">FN</div>
+            <div>
+              <div class="history-name">Fortnite Solo — Eliminatória</div>
+              <div class="history-meta">06/06 · 18:00</div>
+            </div>
+          </div>
+          <div class="history-result">
+            <div class="result-badge loss">Eliminado</div>
+            <div class="history-kd">3 eliminações</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>

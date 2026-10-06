@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HunterTracker — Admin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="admin.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="admin-shell">
+    <!-- SIDEBAR -->
+    <aside class="admin-sidebar" aria-label="Menu administrativo">
+      <div class="admin-logo">
+        <img src="img/logo-ht.png?v=2" alt="" />
+        <span class="brand">HUNTER<span>TRACKER</span></span>
+        <span class="admin-badge">ADMIN</span>
+      </div>
+      <nav aria-label="Navegação do painel">
+        <div class="nav-section-label">Visão geral</div>
+        <a class="nav-item active" href="admin.html" aria-current="page">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>
+          Dashboard
+        </a>
+        <a class="nav-item" href="#">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Usuários
+          <span class="nav-badge">2.847</span>
+        </a>
+        <a class="nav-item" href="#">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.59 13.41 11 3.83A2 2 0 0 0 9.59 3.2H4a1 1 0 0 0-1 1v5.59c0 .53.21 1.04.59 1.41l9.58 9.59a2 2 0 0 0 2.82 0l4.6-4.6a2 2 0 0 0 0-2.82z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg>
+          Campeonatos
+          <span class="nav-badge">12</span>
+        </a>
+        <div class="nav-section-label">Sistema</div>
+        <a class="nav-item" href="#">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1.04 1.56V21a2 2 0 0 1-4 0v-.09A1.7 1.7 0 0 0 9 19.4a1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.56-1.04H3a2 2 0 0 1 0-4h.09A1.7 1.7 0 0 0 4.6 9a1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1.04-1.56V3a2 2 0 0 1 4 0v.09A1.7 1.7 0 0 0 15 4.6a1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.7 1.7 0 0 0 19.4 9a1.7 1.7 0 0 0 1.56 1.04H21a2 2 0 0 1 0 4h-.09a1.7 1.7 0 0 0-1.51 1.04z"/></svg>
+          Agente IA
+        </a>
+        <a class="nav-item" href="#">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+          Configurações
+        </a>
+        <a class="nav-item" href="#">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+          Logs
+        </a>
+      </nav>
+    </aside>
+    <!-- CONTEÚDO PRINCIPAL -->
+    <div class="admin-main">
+      <header class="admin-topbar">
+        <div class="admin-user">
+          <div class="admin-user-info">
+            <div class="admin-user-name" id="admin-nome">Administrador</div>
+            <div class="admin-user-sub">Acesso total ao sistema</div>
+          </div>
+          <div class="admin-avatar" id="admin-avatar" aria-hidden="true">A</div>
+          <a class="btn-logout" id="btn-logout" href="login.html">Sair</a>
+        </div>
+      </header>
+      <main class="admin-content">
+        <div class="page-heading">
+          <h1>Dashboard — Administração</h1>
+          <p>Visão geral do sistema · Atualizado em tempo real</p>
+        </div>
+        <section class="stat-grid" aria-label="Métricas gerais do sistema">
+          <div class="stat-card">
+            <div class="stat-top">
+              <span class="stat-label">Total de usuários</span>
+              <span class="stat-icon blue" aria-hidden="true">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+              </span>
+            </div>
+            <div class="stat-value">2.847</div>
+            <div class="stat-delta">▲ +143 esta semana</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-top">
+              <span class="stat-label">Usuários online agora</span>
+              <span class="stat-icon green" aria-hidden="true">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              </span>
+            </div>
+            <div class="stat-value">384</div>
+            <div class="stat-delta">▲ +28 vs. ontem</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-top">
+              <span class="stat-label">Campeonatos ativos</span>
+              <span class="stat-icon orange" aria-hidden="true">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.59 13.41 11 3.83A2 2 0 0 0 9.59 3.2H4a1 1 0 0 0-1 1v5.59c0 .53.21 1.04.59 1.41l9.58 9.59a2 2 0 0 0 2.82 0l4.6-4.6a2 2 0 0 0 0-2.82z"/></svg>
+              </span>
+            </div>
+            <div class="stat-value">12</div>
+            <div class="stat-delta">▲ +3 novos hoje</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-top">
+              <span class="stat-label">Partidas rastreadas</span>
+              <span class="stat-icon purple" aria-hidden="true">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              </span>
+            </div>
+            <div class="stat-value">18.432</div>
+            <div class="stat-delta">▲ +1.2k este mês</div>
+          </div>
+        </section>
+        <div class="two-col">
+          <!-- Tabela de usuários recentes -->
+          <section class="panel users-panel" aria-labelledby="recent-users-h">
+            <div class="panel-head">
+              <h2 id="recent-users-h">Usuários recentes</h2>
+              <a class="panel-link" href="#">Ver todos →</a>
+            </div>
+            <table class="users-table">
+              <thead>
+                <tr><th>Usuário</th><th>Jogo</th><th>Partidas</th><th>Pontos</th><th>Status</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="user-cell">
+                      <span class="user-avatar" style="background:#e0393e;">B</span>
+                      <div><div class="user-name">Bicoibauduco</div><div class="user-email">bico@email.com</div></div>
+                    </div>
+                  </td>
+                  <td>Fortnite</td><td>240</td><td>118</td>
+                  <td><span class="status-pill online">ONLINE</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="user-cell">
+                      <span class="user-avatar" style="background:#2f6fed;">M</span>
+                      <div><div class="user-name">MegaHunter</div><div class="user-email">mega@email.com</div></div>
+                    </div>
+                  </td>
+                  <td>Valorant</td><td>183</td><td>95</td>
+                  <td><span class="status-pill online">ONLINE</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="user-cell">
+                      <span class="user-avatar" style="background:#f5921b;">K</span>
+                      <div><div class="user-name">KillStreakPro</div><div class="user-email">ksp@email.com</div></div>
+                    </div>
+                  </td>
+                  <td>CS2</td><td>97</td><td>72</td>
+                  <td><span class="status-pill ausente">AUSENTE</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="user-cell">
+                      <span class="user-avatar" style="background:#8654e0;">S</span>
+                      <div><div class="user-name">ShadowByte</div><div class="user-email">shadow@email.com</div></div>
+                    </div>
+                  </td>
+                  <td>LoL</td><td>312</td><td>201</td>
+                  <td><span class="status-pill online">ONLINE</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="user-cell">
+                      <span class="user-avatar" style="background:#17a865;">N</span>
+                      <div><div class="user-name">NightViper</div><div class="user-email">night@email.com</div></div>
+                    </div>
+                  </td>
+                  <td>Fortnite</td><td>54</td><td>33</td>
+                  <td><span class="status-pill offline">OFFLINE</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="user-cell">
+                      <span class="user-avatar" style="background:#d9382e;">R</span>
+                      <div><div class="user-name">RedPhoenix</div><div class="user-email">red@email.com</div></div>
+                    </div>
+                  </td>
+                  <td>Rainbow 6</td><td>129</td><td>88</td>
+                  <td><span class="status-pill ausente">AUSENTE</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <!-- Painel do Agente IA -->
+          <aside class="panel agent-panel" aria-labelledby="agent-h">
+            <div class="panel-head">
+              <h2 id="agent-h">Agente IA</h2>
+              <span class="agent-status"><span class="dot"></span>ATIVO</span>
+            </div>
+            <div class="agent-log" role="log" aria-label="Log de atividade do agente">
+              <div><span class="time">[14:28:10]</span> <span class="ok">✓ FIND</span> LoL — Worlds 2026 Qualifier encontrado</div>
+              <div><span class="time">[14:28:11]</span> <span class="ok">✓ FIND</span> Rainbow 6 Siege — Pro League S14</div>
+              <div><span class="time">[14:28:12]</span> <span class="sync">⟳ SYNC</span> Sincronizando 384 usuários online...</div>
+              <div><span class="time">[14:28:14]</span> <span class="ok">✓ DONE</span> 12 campeonatos indexados. Próximo scan em 5min</div>
+              <div><span class="time">[14:33:00]</span> <span class="sync">⟳ SCAN</span> Iniciando novo ciclo de varredura...</div>
+            </div>
+            <div class="found-title">Campeonatos localizados</div>
+            <div class="found-item">
+              <div><div class="found-name">Valorant Champions Regional</div><div class="found-sub">Rodada 4 de 6 · 48 jogadores</div></div>
+              <span class="tag-live">Ao vivo</span>
+            </div>
+            <div class="found-item">
+              <div><div class="found-name">CS2 BLAST Premier</div><div class="found-sub">Rodada 3 · 32 times</div></div>
+              <span class="tag-live">Ao vivo</span>
+            </div>
+            <div class="found-item">
+              <div><div class="found-name">Fortnite Battle Cup</div><div class="found-sub">Inscrições abertas · Início 20/05</div></div>
+              <span class="tag-soon">Em breve</span>
+            </div>
+            <div class="found-item">
+              <div><div class="found-name">LoL Worlds 2028 Qualifier</div><div class="found-sub">Fase de grupos · 16 times</div></div>
+              <span class="tag-soon">Em breve</span>
+            </div>
+          </aside>
+        </div>
+        <div class="three-col">
+          <section class="panel" aria-labelledby="chart-h">
+            <div class="panel-head"><h2 id="chart-h">Usuários ativos / dia</h2></div>
+            <div class="bar-chart" aria-hidden="true">
+              <div class="bar" style="height:55%;"></div>
+              <div class="bar" style="height:40%;"></div>
+              <div class="bar" style="height:65%;"></div>
+              <div class="bar" style="height:50%;"></div>
+              <div class="bar" style="height:72%;"></div>
+              <div class="bar peak" style="height:95%;"></div>
+              <div class="bar" style="height:85%;"></div>
+            </div>
+            <div class="bar-labels">
+              <span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span><span>Dom</span>
+            </div>
+            <div class="chart-value">384</div>
+            <div class="chart-delta">▲ +28 vs. ontem</div>
+          </section>
+          <section class="panel" aria-labelledby="health-h">
+            <div class="panel-head"><h2 id="health-h">Saúde do sistema</h2></div>
+            <div class="kv-list">
+              <div class="kv-row"><span class="kv-label">Uptime do servidor</span><span class="kv-value good">99,98%</span></div>
+              <div class="kv-row"><span class="kv-label">Latência média API</span><span class="kv-value">142ms</span></div>
+              <div class="kv-row"><span class="kv-label">Uso de CPU</span><span class="kv-value">34%</span></div>
+              <div class="kv-row"><span class="kv-label">Memória RAM</span><span class="kv-value">2,1 / 8 GB</span></div>
+              <div class="kv-row"><span class="kv-label">Agente IA</span><span class="kv-value good">Ativo</span></div>
+            </div>
+          </section>
+          <section class="panel" aria-labelledby="signups-h">
+            <div class="panel-head"><h2 id="signups-h">Novos cadastros</h2></div>
+            <div class="kv-list">
+              <div class="kv-row"><span class="kv-label">Hoje</span><span class="kv-value">47</span></div>
+              <div class="kv-row"><span class="kv-label">Esta semana</span><span class="kv-value">143</span></div>
+              <div class="kv-row"><span class="kv-label">Este mês</span><span class="kv-value">612</span></div>
+              <div class="kv-row"><span class="kv-label">Total acumulado</span><span class="kv-value">2.847</span></div>
+              <div class="kv-row"><span class="kv-label">Retenção (7 dias)</span><span class="kv-value good">68%</span></div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+  </body>
+</html>

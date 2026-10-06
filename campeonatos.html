@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HunterTracker — Campeonatos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="campeonatos.css" rel="stylesheet" />
+</head>
+<body>
+<!-- NAV: mesmo padrão de navegação usado em todas as páginas internas -->
+<nav aria-label="Navegação principal">
+  <a href="dashboard.html" class="nav-logo">
+    <img src="img/logo-ht.png?v=2" alt="HunterTracker" class="ht-logo-icon" />
+    <span class="nav-brand">HUNTER<span>TRACKER</span></span>
+  </a>
+  <div class="nav-search" role="search">
+    <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="color:#7b8ab8;flex-shrink:0" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+    <label for="nav-search-input" class="sr-only">Buscar campeonato ou jogo</label>
+    <input id="nav-search-input" type="text" placeholder="Buscar campeonato, jogo..." />
+    <button class="nav-buscar" type="button">BUSCAR</button>
+  </div>
+  <div class="nav-links">
+    <a href="campeonatos.html" class="active" aria-current="page">Campeonatos</a>
+    <a href="rankings.html">Rankings</a>
+    <a href="perfil.html">Minha Conta</a>
+    <a href="planos.html">Planos</a>
+  </div>
+</nav>
+<main class="page">
+  <div class="page-header">
+    <div class="page-title-block">
+      <div class="page-label">Temporada 2026</div>
+      <div class="page-title">CAMPEONATOS <span>ATIVOS</span></div>
+      <div class="page-sub">Acompanhe torneios ao vivo, inscreva-se em próximas edições</div>
+    </div>
+    <button class="btn-inscrever">+ INSCREVER-SE</button>
+  </div>
+  <!-- STATS STRIP -->
+  <div class="stats-strip">
+    <div class="stat-chip">
+      <div class="stat-chip-icon ic-live">🔴</div>
+      <div>
+        <div class="stat-chip-val">7</div>
+        <div class="stat-chip-lbl">Ao Vivo Agora</div>
+      </div>
+    </div>
+    <div class="stat-chip">
+      <div class="stat-chip-icon ic-up">🔵</div>
+      <div>
+        <div class="stat-chip-val">18</div>
+        <div class="stat-chip-lbl">Inscrições Abertas</div>
+      </div>
+    </div>
+    <div class="stat-chip">
+      <div class="stat-chip-icon ic-done">⚫</div>
+      <div>
+        <div class="stat-chip-val">3.840</div>
+        <div class="stat-chip-lbl">Jogadores Inscritos</div>
+      </div>
+    </div>
+    <div class="stat-chip">
+      <div class="stat-chip-icon ic-prize">🏆</div>
+      <div>
+        <div class="stat-chip-val">R$84k</div>
+        <div class="stat-chip-lbl">Em Prize Pool Total</div>
+      </div>
+    </div>
+  </div>
+  <!-- FILTER ROW -->
+  <div class="filter-row">
+    <span class="filter-label">Filtrar:</span>
+    <button class="filter-btn active"><span class="filter-dot fd-all"></span> Todos</button>
+    <button class="filter-btn"><span class="filter-dot fd-val"></span> Valorant</button>
+    <button class="filter-btn"><span class="filter-dot fd-cs"></span> CS2</button>
+    <button class="filter-btn"><span class="filter-dot fd-fn"></span> Fortnite</button>
+    <button class="filter-btn"><span class="filter-dot fd-lol"></span> League of Legends</button>
+    <button class="filter-btn"><span class="filter-dot fd-r6"></span> Rainbow Six</button>
+    <button class="filter-btn"><span class="filter-dot fd-rl"></span> Rocket League</button>
+  </div>
+  <!-- STATUS TABS -->
+  <div class="status-tabs">
+    <button class="status-tab tab-live active">Ao Vivo <span class="tab-count">7</span></button>
+    <button class="status-tab">Em Breve <span class="tab-count">18</span></button>
+    <button class="status-tab">Inscrições Abertas <span class="tab-count">12</span></button>
+    <button class="status-tab">Encerrados <span class="tab-count">41</span></button>
+  </div>
+  <!-- FEATURED LIVE — VCT Brasil -->
+  <div class="section-title">Destaque</div>
+  <div class="featured-live-card">
+    <div class="flc-banner bg-val">
+      <div class="flc-overlay"></div>
+      <div class="flc-content">
+        <div class="flc-tag">Valorant Champions Tour</div>
+        <div class="flc-title">VCT Americas 2026 — Split 2</div>
+        <div class="flc-sub">Grupo A · Semana 4 de 6 · São Paulo / Online</div>
+      </div>
+      <div class="flc-badges">
+        <div class="live-badge"><div class="live-dot"></div> AO VIVO</div>
+        <div class="upcoming-badge">SEMIFINAL</div>
+      </div>
+    </div>
+    <div class="flc-body">
+      <div class="flc-stat">
+        <div class="flc-stat-val gold">R$120.000</div>
+        <div class="flc-stat-lbl">Prize Pool Total</div>
+      </div>
+      <div class="flc-stat">
+        <div class="flc-stat-val">32</div>
+        <div class="flc-stat-lbl">Times Participantes</div>
+      </div>
+      <div class="flc-stat">
+        <div class="flc-stat-val cyan">6</div>
+        <div class="flc-stat-lbl">Partidas Hoje</div>
+      </div>
+      <div class="flc-stat">
+        <div class="flc-stat-val red">AO VIVO</div>
+        <div class="flc-stat-lbl">LOUD vs FURIA — Map 2</div>
+        <div style="margin-top:8px;">
+          <div class="bracket-matches">
+            <div class="bracket-match">
+              <div class="bm-round">Mapa 2 — Split (AO VIVO)</div>
+              <div class="bm-team winner">
+                <span class="bm-team-name">LOUD</span>
+                <span class="bm-team-score" style="color:#22c55e">8</span>
+              </div>
+              <div class="bm-sep"></div>
+              <div class="bm-team loser">
+                <span class="bm-team-name">FURIA</span>
+                <span class="bm-team-score">5</span>
+              </div>
+            </div>
+            <div class="bracket-match">
+              <div class="bm-round">Próxima — 20:30</div>
+              <div class="bm-team">
+                <span class="bm-team-name">NIP</span>
+                <span class="bm-team-score" style="color:var(--cinza)">—</span>
+              </div>
+              <div class="bm-sep"></div>
+              <div class="bm-team">
+                <span class="bm-team-name">100T</span>
+                <span class="bm-team-score" style="color:var(--cinza)">—</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- AO VIVO GRID -->
+  <div class="section-title">Ao Vivo Agora</div>
+  <div class="champs-grid">
+    <!-- Card 1 – CS2 -->
+    <div class="champ-card">
+      <div class="champ-banner bg-cs">
+        <div class="champ-banner-overlay"></div>
+        <div class="champ-banner-content">
+          <span class="champ-game-name">CS2</span>
+          <div class="champ-badge-pos">
+            <div class="live-badge"><div class="live-dot"></div> AO VIVO</div>
+          </div>
+        </div>
+      </div>
+      <div class="champ-body">
+        <div class="champ-name">ESL Pro League S21 — Americas</div>
+        <div class="champ-meta">
+          <span class="champ-meta-item">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            14–29 Jun 2026
+          </span>
+          <span class="champ-meta-item">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            16 times
+          </span>
+          <span class="champ-meta-item">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            Fase Grupos
+          </span>
+        </div>
+        <div class="champ-progress">
+          <div class="cp-header"><span class="cp-label">Progresso do torneio</span><span class="cp-val">Semana 2 / 3</span></div>
+          <div class="cp-bar"><div class="cp-fill cp-cyan" style="width:65%"></div></div>
+        </div>
+        <div class="champ-stats-row">
+          <div class="cs-box"><div class="cs-val">16</div><div class="cs-lbl">Times</div></div>
+          <div class="cs-box"><div class="cs-val" style="color:var(--cyan)">4</div><div class="cs-lbl">Hoje</div></div>
+          <div class="cs-box"><div class="cs-val" style="color:var(--gold)" data-lock>$200k</div><div class="cs-lbl">Prize</div></div>
+        </div>
+        <div class="champ-footer">
+          <div><div class="prize-val">$200.000</div><div class="prize-lbl">Prize Pool</div></div>
+          <button class="btn-ver">VER AO VIVO</button>
+        </div>
+      </div>
+    </div>
+    <!-- Card 2 – Fortnite -->
+    <div class="champ-card">
+      <div class="champ-banner bg-fn">
+        <div class="champ-banner-overlay"></div>
+        <div class="champ-banner-content">
+          <span class="champ-game-name">Fortnite</span>
+          <div class="champ-badge-pos">
+            <div class="live-badge"><div class="live-dot"></div> AO VIVO</div>
+          </div>
+        </div>
+      </div>
+      <div class="champ-body">
+        <div class="champ-name">FNCS Global Championship 2026</div>
+        <div class="champ-meta">
+          <span class="champ-meta-item">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            10–30 Jun 2026
+          </span>
+          <span class="champ-meta-item">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+            100 players
+          </span>
+        </div>
+        <div class="champ-progress">
+          <div class="cp-header"><span class="cp-label">Rodada atual</span><span class="cp-val">R3 / 6</span></div>
+          <div class="cp-bar"><div class="cp-fill cp-cyan" style="width:50%"></div></div>
+        </div>
+        <div class="champ-stats-row">
+          <div class="cs-box"><div class="cs-val">100</div><div class="cs-lbl">Players</div></div>
+          <div class="cs-box"><div class="cs-val" style="color:var(--cyan)">Rodada 3</div><div class="cs-lbl">Fase</div></div>
+          <div class="cs-box"><div class="cs-val" style="color:var(--gold)" data-lock>$3M</div><div class="cs-lbl">Prize</div></div>
+        </div>
+        <div class="champ-footer">
+          <div><div class="prize-val">$3.000.000</div><div class="prize-lbl">Prize Pool</div></div>
+          <button class="btn-ver">VER AO VIVO</button>
+        </div>
+      </div>
+    </div>
+    <!-- Card 3 – Rainbow Six -->
+    <div class="champ-card">
+      <div class="champ-banner bg-r6">
+        <div class="champ-banner-overlay"></div>
+        <div class="champ-banner-content">
+          <span class="champ-game-name">Rainbow Six</span>
+          <div class="champ-badge-pos">
+            <div class="live-badge"><div class="live-dot"></div> AO VIVO</div>
+          </div>
+        </div>
+      </div>
+      <div class="champ-body">
+        <div class="champ-name">Six Invitational 2026 — Majors BR</div>
+        <div class="champ-meta">
+          <span class="champ-meta-item">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            12–22 Jun 2026
+          </span>
+          <span class="champ-meta-item">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+            20 times
+          </span>
+        </div>
+        <div class="champ-progress">
+          <div class="cp-header"><span class="cp-label">Quartas de Final</span><span class="cp-val">4 / 8 partidas</span></div>
+          <div class="cp-bar"><div class="cp-fill cp-red" style="width:50%"></div></div>
+        </div>
+        <div class="champ-stats-row">
+          <div class="cs-box"><div class="cs-val">20</div><div class="cs-lbl">Times</div></div>
+          <div class="cs-box"><div class="cs-val" style="color:#ef4444">QUARTAS</div><div class="cs-lbl">Fase</div></div>
+          <div class="cs-box"><div class="cs-val" style="color:var(--gold)" data-lock>R$50k</div><div class="cs-lbl">Prize</div></div>
+        </div>
+        <div class="champ-footer">
+          <div><div class="prize-val">R$50.000</div><div class="prize-lbl">Prize Pool</div></div>
+          <button class="btn-ver">VER AO VIVO</button>
+        </div>
+      </div>
+    </div>
+    <!-- Card 4 – League of Legends -->
+    <div class="champ-card">
+      <div class="champ-banner bg-lol">
+        <div class="champ-banner-overlay"></div>
+        <div class="champ-banner-content">
+          <span class="champ-game-name">League of Legends</span>
+          <div class="champ-badge-pos">
+            <div class="live-badge"><div class="live-dot"></div> AO VIVO</div>
+          </div>
+        </div>
+      </div>
+      <div class="champ-body">
+        <div class="champ-name">CBLOL 2026 — Split 1 Playoffs</div>
+        <div class="champ-meta">
+          <span class="champ-meta-item">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            01–29 Jun 2026
+          </span>
+          <span class="champ-meta-item">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+            10 times
+          </span>
+        </div>
+        <div class="champ-progress">
+          <div class="cp-header"><span class="cp-label">Playoffs</span><span class="cp-val">Semifinal</span></div>
+          <div class="cp-bar"><div class="cp-fill cp-gold" style="width:80%"></div></div>
+        </div>
+        <div class="champ-stats-row">
+          <div class="cs-box"><div class="cs-val">10</div><div class="cs-lbl">Times</div></div>
+          <div class="cs-box"><div class="cs-val" style="color:var(--gold)">SEMI</div><div class="cs-lbl">Fase</div></div>
+          <div class="cs-box"><div class="cs-val" style="color:var(--gold)" data-lock>R$80k</div><div class="cs-lbl">Prize</div></div>
+        </div>
+        <div class="champ-footer">
+          <div><div class="prize-val">R$80.000</div><div class="prize-lbl">Prize Pool</div></div>
+          <button class="btn-ver">VER AO VIVO</button>
+        </div>
+      </div>
+    </div>
+    <!-- Card 5 – Rocket League -->
+    <div class="champ-card">
+      <div class="champ-banner bg-rl">
+        <div class="champ-banner-overlay"></div>
+        <div class="champ-banner-content">
+          <span class="champ-game-name">Rocket League</span>
+          <div class="champ-badge-pos">
+            <div class="live-badge"><div class="live-dot"></div> AO VIVO</div>
+          </div>
+        </div>
+      </div>
+      <div class="champ-body">
+        <div class="champ-name">RLCS 2026 — South America Major</div>
+        <div class="champ-meta">
+          <span class="champ-meta-item">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            13–21 Jun 2026
+          </span>
+          <span class="champ-meta-item">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+            24 times
+          </span>
+        </div>
+        <div class="champ-progress">
+          <div class="cp-header"><span class="cp-label">Fase de Grupos</span><span class="cp-val">Dia 2 / 3</span></div>
+          <div class="cp-bar"><div class="cp-fill cp-cyan" style="width:66%"></div></div>
+        </div>
+        <div class="champ-stats-row">
+          <div class="cs-box"><div class="cs-val">24</div><div class="cs-lbl">Times</div></div>
+          <div class="cs-box"><div class="cs-val" style="color:var(--cyan)">GRUPOS</div><div class="cs-lbl">Fase</div></div>
+          <div class="cs-box"><div class="cs-val" style="color:var(--gold)" data-lock>$75k</div><div class="cs-lbl">Prize</div></div>
+        </div>
+        <div class="champ-footer">
+          <div><div class="prize-val">$75.000</div><div class="prize-lbl">Prize Pool</div></div>
+          <button class="btn-ver">VER AO VIVO</button>
+        </div>
+      </div>
+    </div>
+    <!-- Card 6 – Valorant Open -->
+    <div class="champ-card">
+      <div class="champ-banner bg-val">
+        <div class="champ-banner-overlay"></div>
+        <div class="champ-banner-content">
+          <span class="champ-game-name">Valorant</span>
+          <div class="champ-badge-pos">
+            <div class="live-badge"><div class="live-dot"></div> AO VIVO</div>
+          </div>
+        </div>
+      </div>
+      <div class="champ-body">
+        <div class="champ-name">HunterTracker Open Cup — Temporada 3</div>
+        <div class="champ-meta">
+          <span class="champ-meta-item">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            15 Jun 2026
+          </span>
+          <span class="champ-meta-item">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+            128 players
+          </span>
+        </div>
+        <div class="champ-progress">
+          <div class="cp-header"><span class="cp-label">Eliminatórias</span><span class="cp-val">Top 16 definidos</span></div>
+          <div class="cp-bar"><div class="cp-fill cp-green" style="width:75%"></div></div>
+        </div>
+        <div class="champ-stats-row">
+          <div class="cs-box"><div class="cs-val">128</div><div class="cs-lbl">Players</div></div>
+          <div class="cs-box"><div class="cs-val" style="color:var(--verde)">TOP 16</div><div class="cs-lbl">Fase</div></div>
+          <div class="cs-box"><div class="cs-val" style="color:var(--gold)" data-lock>R$5k</div><div class="cs-lbl">Prize</div></div>
+        </div>
+        <div class="champ-footer">
+          <div><div class="prize-val">R$5.000</div><div class="prize-lbl">Prize Pool</div></div>
+          <button class="btn-ver">VER AO VIVO</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- UPCOMING SCHEDULE -->
+  <div class="section-title">Em Breve — Inscrições Abertas</div>
+  <div class="schedule-list">
+    <div class="sched-item">
+      <div class="sched-date-block">
+        <div class="sched-day">22</div>
+        <div class="sched-mon">Jun</div>
+      </div>
+      <div class="sched-sep"></div>
+      <div class="sched-game-dot fd-val" style="background:#ff4655;"></div>
+      <div class="sched-body">
+        <div class="sched-name">VALORANT Masters BR — Summer 2026</div>
+        <div class="sched-meta">Online · 64 times · Duração: 3 semanas · Inscrições até 20/Jun</div>
+      </div>
+      <div class="sched-right">
+        <div class="sched-prize">R$30.000</div>
+        <div class="upcoming-badge">INSCREVER</div>
+      </div>
+    </div>
+    <div class="sched-item">
+      <div class="sched-date-block">
+        <div class="sched-day">28</div>
+        <div class="sched-mon">Jun</div>
+      </div>
+      <div class="sched-sep"></div>
+      <div class="sched-game-dot" style="background:#e8aa4d;"></div>
+      <div class="sched-body">
+        <div class="sched-name">CS2 Open Brasil — Temporada 4</div>
+        <div class="sched-meta">Online · 32 times · Duração: 2 semanas · Inscrições até 25/Jun</div>
+      </div>
+      <div class="sched-right">
+        <div class="sched-prize">R$12.000</div>
+        <div class="upcoming-badge">INSCREVER</div>
+      </div>
+    </div>
+    <div class="sched-item">
+      <div class="sched-date-block">
+        <div class="sched-day">05</div>
+        <div class="sched-mon">Jul</div>
+      </div>
+      <div class="sched-sep"></div>
+      <div class="sched-game-dot" style="background:#00b2ff;"></div>
+      <div class="sched-body">
+        <div class="sched-name">FNCS Chapter 6 Season 3 — BR Finals</div>
+        <div class="sched-meta">Online · Solo/Duo · Duração: 2 dias · Qualificatórias abertas</div>
+      </div>
+      <div class="sched-right">
+        <div class="sched-prize">$1.000.000</div>
+        <div class="upcoming-badge">INSCREVER</div>
+      </div>
+    </div>
+    <div class="sched-item">
+      <div class="sched-date-block">
+        <div class="sched-day">10</div>
+        <div class="sched-mon">Jul</div>
+      </div>
+      <div class="sched-sep"></div>
+      <div class="sched-game-dot" style="background:#c69b3a;"></div>
+      <div class="sched-body">
+        <div class="sched-name">CBLOL Academy 2026 — Split 2</div>
+        <div class="sched-meta">São Paulo / Online · 8 times · Duração: 5 semanas</div>
+      </div>
+      <div class="sched-right">
+        <div class="sched-prize">R$15.000</div>
+        <button class="btn-inscr">INSCREVER</button>
+      </div>
+    </div>
+    <div class="sched-item">
+      <div class="sched-date-block">
+        <div class="sched-day">18</div>
+        <div class="sched-mon">Jul</div>
+      </div>
+      <div class="sched-sep"></div>
+      <div class="sched-game-dot" style="background:#0072ce;"></div>
+      <div class="sched-body">
+        <div class="sched-name">HunterTracker R6 Cup — Edição Especial</div>
+        <div class="sched-meta">Online · 16 times · Formato: Double Elimination · Inscrições até 14/Jul</div>
+      </div>
+      <div class="sched-right">
+        <div class="sched-prize">R$8.000</div>
+        <button class="btn-inscr">INSCREVER</button>
+      </div>
+    </div>
+    <div class="sched-item">
+      <div class="sched-date-block">
+        <div class="sched-day">25</div>
+        <div class="sched-mon">Jul</div>
+      </div>
+      <div class="sched-sep"></div>
+      <div class="sched-game-dot" style="background:#5f74a0;"></div>
+      <div class="sched-body">
+        <div class="sched-name">Rocket League South America Championship</div>
+        <div class="sched-meta">Online · 32 times · Duração: 3 semanas · Classificatória aberta</div>
+      </div>
+      <div class="sched-right">
+        <div class="sched-prize">$50.000</div>
+        <button class="btn-inscr">INSCREVER</button>
+      </div>
+    </div>
+  </div>
+  <!-- PAGINATION -->
+  <div class="pagination">
+    <button class="pg-btn">‹</button>
+    <button class="pg-btn active">1</button>
+    <button class="pg-btn">2</button>
+    <button class="pg-btn">3</button>
+    <button class="pg-btn">›</button>
+  </div>
+</main>
+<!-- Lógica específica desta página -->
+</body>
+</html>

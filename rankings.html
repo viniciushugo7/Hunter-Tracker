@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HunterTracker — Rankings</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="rankings.css" rel="stylesheet" />
+</head>
+<body>
+  <!-- NAV: mesmo padrão de navegação usado em todas as páginas internas -->
+  <nav aria-label="Navegação principal">
+    <a href="dashboard.html" class="nav-logo">
+      <img src="img/logo-ht.png?v=2" alt="HunterTracker" class="ht-logo-icon" />
+      <span class="nav-brand">HUNTER<span>TRACKER</span></span>
+    </a>
+    <div class="nav-search" role="search">
+      <svg width="12" height="12" fill="none" stroke="#7b8ab8" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <label for="nav-search-input" class="sr-only">Pesquisar jogador</label>
+      <input id="nav-search-input" type="text" placeholder="Pesquisar jogador..." />
+      <button class="nav-buscar" type="button">Buscar</button>
+    </div>
+    <div class="nav-links">
+      <a href="campeonatos.html">Campeonatos</a>
+      <a href="rankings.html" class="active" aria-current="page">Rankings</a>
+      <a href="perfil.html">Minha Conta</a>
+      <a href="planos.html">Planos</a>
+    </div>
+  </nav>
+  <main class="page">
+    <!-- LEFT: LEADERBOARD -->
+    <section aria-label="Tabela de classificação">
+      <div class="section-title">Tabela de Classificação</div>
+      <div class="tabs">
+        <button class="tab active">Campeonato</button>
+        <button class="tab">Participação</button>
+        <button class="tab">Função</button>
+        <button class="tab">KDA</button>
+      </div>
+      <div class="leaderboard-table">
+        <div class="lb-head">
+          <span>#</span>
+          <span>Time</span>
+          <span>Sub</span>
+          <span>Pontos</span>
+          <span>Vitórias</span>
+          <span>K/D</span>
+        </div>
+        <!-- pos 1-3 top -->
+        <div class="lb-row top1">
+          <div class="lb-pos">1</div>
+          <div class="lb-team">
+            <div class="lb-avatar">GT</div>
+            <div><div class="lb-name">GhostTeam</div><div class="lb-sub">—</div></div>
+          </div>
+          <div class="lb-val">—</div>
+          <div class="lb-val pts">240</div>
+          <div class="lb-val">3</div>
+          <div class="lb-val"><span class="kd-badge kd-high">4.1</span></div>
+        </div>
+        <div class="lb-row top2">
+          <div class="lb-pos">2</div>
+          <div class="lb-team">
+            <div class="lb-avatar">AX</div>
+            <div><div class="lb-name">Apex Squad</div><div class="lb-sub">—</div></div>
+          </div>
+          <div class="lb-val">—</div>
+          <div class="lb-val pts">180</div>
+          <div class="lb-val">2</div>
+          <div class="lb-val"><span class="kd-badge kd-high">3.0</span></div>
+        </div>
+        <div class="lb-row top3">
+          <div class="lb-pos">3</div>
+          <div class="lb-team">
+            <div class="lb-avatar">NX</div>
+            <div><div class="lb-name">NexForce</div><div class="lb-sub">—</div></div>
+          </div>
+          <div class="lb-val">—</div>
+          <div class="lb-val pts">175</div>
+          <div class="lb-val">2</div>
+          <div class="lb-val"><span class="kd-badge kd-mid">3.3</span></div>
+        </div>
+        <!-- pos 4-6 -->
+        <div class="lb-row">
+          <div class="lb-pos">4</div>
+          <div class="lb-team"><div class="lb-avatar">VK</div><div><div class="lb-name">VoidKillers</div><div class="lb-sub">—</div></div></div>
+          <div class="lb-val">—</div><div class="lb-val pts">158</div><div class="lb-val">1</div>
+          <div class="lb-val"><span class="kd-badge kd-mid">2.8</span></div>
+        </div>
+        <div class="lb-row">
+          <div class="lb-pos">5</div>
+          <div class="lb-team"><div class="lb-avatar">SR</div><div><div class="lb-name">StormRage</div><div class="lb-sub">—</div></div></div>
+          <div class="lb-val">—</div><div class="lb-val pts">146</div><div class="lb-val">0</div>
+          <div class="lb-val"><span class="kd-badge kd-mid">2.5</span></div>
+        </div>
+        <div class="lb-row">
+          <div class="lb-pos">6</div>
+          <div class="lb-team"><div class="lb-avatar">DZ</div><div><div class="lb-name">DarkZone</div><div class="lb-sub">—</div></div></div>
+          <div class="lb-val">—</div><div class="lb-val pts">145</div><div class="lb-val">0</div>
+          <div class="lb-val"><span class="kd-badge kd-low">2.0</span></div>
+        </div>
+        <div class="lb-row">
+          <div class="lb-pos">7</div>
+          <div class="lb-team"><div class="lb-avatar">IW</div><div><div class="lb-name">IronWolves</div><div class="lb-sub">—</div></div></div>
+          <div class="lb-val">—</div><div class="lb-val pts">120</div><div class="lb-val">0</div>
+          <div class="lb-val"><span class="kd-badge kd-low">1.9</span></div>
+        </div>
+        <div class="lb-row mine">
+          <div class="lb-pos">8</div>
+          <div class="lb-team">
+            <div class="lb-avatar">BC</div>
+            <div><div class="lb-name">Bicoibauduco</div><div class="lb-sub">Pro Valorant</div></div>
+          </div>
+          <div class="lb-val">—</div>
+          <div class="lb-val pts">118</div>
+          <div class="lb-val">0</div>
+          <div class="lb-val"><span class="kd-badge kd-high">3.2</span></div>
+        </div>
+        <!-- Remaining rows -->
+        <div class="lb-row"><div class="lb-pos">9</div><div class="lb-team"><div class="lb-avatar">PH</div><div><div class="lb-name">PhantomX</div><div class="lb-sub">—</div></div></div><div class="lb-val">—</div><div class="lb-val pts">118</div><div class="lb-val">0</div><div class="lb-val"><span class="kd-badge kd-low">3.2</span></div></div>
+        <div class="lb-row"><div class="lb-pos">10</div><div class="lb-team"><div class="lb-avatar">CY</div><div><div class="lb-name">CyberNova</div><div class="lb-sub">—</div></div></div><div class="lb-val">—</div><div class="lb-val pts">118</div><div class="lb-val">0</div><div class="lb-val"><span class="kd-badge kd-low">3.2</span></div></div>
+        <div class="lb-row"><div class="lb-pos">11</div><div class="lb-team"><div class="lb-avatar">RG</div><div><div class="lb-name">RedGhost</div><div class="lb-sub">—</div></div></div><div class="lb-val">—</div><div class="lb-val pts">118</div><div class="lb-val">0</div><div class="lb-val"><span class="kd-badge kd-low">3.2</span></div></div>
+        <div class="lb-row"><div class="lb-pos">12</div><div class="lb-team"><div class="lb-avatar">SB</div><div><div class="lb-name">ShadowByte</div><div class="lb-sub">—</div></div></div><div class="lb-val">—</div><div class="lb-val pts">118</div><div class="lb-val">0</div><div class="lb-val"><span class="kd-badge kd-low">3.2</span></div></div>
+        <div class="lb-row"><div class="lb-pos">13</div><div class="lb-team"><div class="lb-avatar">TX</div><div><div class="lb-name">ToxicFlux</div><div class="lb-sub">—</div></div></div><div class="lb-val">—</div><div class="lb-val pts">118</div><div class="lb-val">0</div><div class="lb-val"><span class="kd-badge kd-low">3.2</span></div></div>
+        <div class="lb-row"><div class="lb-pos">14</div><div class="lb-team"><div class="lb-avatar">NV</div><div><div class="lb-name">NightViper</div><div class="lb-sub">—</div></div></div><div class="lb-val">—</div><div class="lb-val pts">118</div><div class="lb-val">0</div><div class="lb-val"><span class="kd-badge kd-low">3.2</span></div></div>
+        <div class="lb-row"><div class="lb-pos">15</div><div class="lb-team"><div class="lb-avatar">BZ</div><div><div class="lb-name">BladeZero</div><div class="lb-sub">—</div></div></div><div class="lb-val">—</div><div class="lb-val pts">118</div><div class="lb-val">0</div><div class="lb-val"><span class="kd-badge kd-low">3.2</span></div></div>
+        <div class="lb-footer">
+          <div class="lb-acompanhe">
+            <div class="lb-dot"></div>
+            <span>Acompanhe seus últimos</span>
+          </div>
+          <button class="btn-programar">Programar Senda</button>
+        </div>
+      </div>
+    </section>
+    <!-- RIGHT: MINHA CLASSIFICAÇÃO -->
+    <aside aria-label="Minha classificação">
+      <div class="section-title">Minha Classificação</div>
+      <!-- Current position -->
+      <div class="panel-card" style="margin-bottom: 0; border-radius: 4px 4px 0 0; border-bottom: none;">
+        <div class="panel-card-title">Posição Atual</div>
+        <div class="my-pos-hero">
+          <div style="display:flex; align-items:flex-start;">
+            <span class="my-pos-sup">#</span>
+            <span class="my-pos-number">8</span>
+          </div>
+          <div class="my-pos-info">
+            <div class="my-pos-name">Bicoibauduco</div>
+            <div class="my-pos-game">Pro Valorant</div>
+            <div class="my-pos-sub">Top 7% do ranking geral</div>
+          </div>
+        </div>
+        <div class="progress-section">
+          <div class="progress-label">
+            <span>Progresso para o Top 5</span>
+            <strong>118 / 146 pts</strong>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" style="width: 81%"></div></div>
+          <div class="progress-label">
+            <span>Pontos necessários</span>
+            <strong style="color:#ef4444;">+28 pts</strong>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" style="width: 81%; background: linear-gradient(90deg, #cc3333, #ff5555);"></div></div>
+        </div>
+      </div>
+      <div class="panel-card" style="border-radius: 0; border-top: 1px solid var(--borda);">
+        <div class="panel-card-title">Minhas Estatísticas</div>
+        <div class="stats-grid">
+          <div class="stat-box">
+            <div class="stat-box-label">Pontos</div>
+            <div class="stat-box-val accent">118</div>
+            <div class="stat-box-diff diff-down">▼ 2 vs. semana passada</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-box-label">K/D Ratio</div>
+            <div class="stat-box-val accent">3.2</div>
+            <div class="stat-box-diff diff-up">▲ +0.4 vs. média</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-box-label">Vitórias</div>
+            <div class="stat-box-val">95</div>
+            <div class="stat-box-diff diff-up">▲ Top 12% geral</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-box-label">Partidas</div>
+            <div class="stat-box-val">240</div>
+            <div class="stat-box-diff" style="color:var(--cinza);">Taxa: 39.6%</div>
+          </div>
+        </div>
+      </div>
+      <!-- Nearby players -->
+      <div class="panel-card" style="border-radius: 0 0 4px 4px; border-top: 1px solid var(--borda);">
+        <div class="panel-card-title">Jogadores Próximos</div>
+        <div class="nearby-row">
+          <div class="nearby-left">
+            <div class="nearby-pos">6</div>
+            <div class="nearby-avatar">DZ</div>
+            <div class="nearby-name">DarkZone</div>
+          </div>
+          <div style="text-align:right;">
+            <div class="nearby-pts">145</div>
+            <div class="nearby-gap need">-27 pts acima</div>
+          </div>
+        </div>
+        <div class="nearby-row">
+          <div class="nearby-left">
+            <div class="nearby-pos">7</div>
+            <div class="nearby-avatar">IW</div>
+            <div class="nearby-name">IronWolves</div>
+          </div>
+          <div style="text-align:right;">
+            <div class="nearby-pts">120</div>
+            <div class="nearby-gap need">-2 pts acima</div>
+          </div>
+        </div>
+        <div class="nearby-row me">
+          <div class="nearby-left">
+            <div class="nearby-pos">8</div>
+            <div class="nearby-avatar" style="color:var(--cyan);">BC</div>
+            <div class="nearby-name">Bicoibauduco</div>
+          </div>
+          <div style="text-align:right;">
+            <div class="nearby-pts" style="color:var(--cyan);">118</div>
+            <div class="nearby-gap" style="color:var(--cyan); font-size:9px;">VOCÊ</div>
+          </div>
+        </div>
+        <div class="nearby-row">
+          <div class="nearby-left">
+            <div class="nearby-pos">9</div>
+            <div class="nearby-avatar">PH</div>
+            <div class="nearby-name">PhantomX</div>
+          </div>
+          <div style="text-align:right;">
+            <div class="nearby-pts">118</div>
+            <div class="nearby-gap ahead">+0 pts de vantagem</div>
+          </div>
+        </div>
+        <div class="nearby-row">
+          <div class="nearby-left">
+            <div class="nearby-pos">10</div>
+            <div class="nearby-avatar">CY</div>
+            <div class="nearby-name">CyberNova</div>
+          </div>
+          <div style="text-align:right;">
+            <div class="nearby-pts">118</div>
+            <div class="nearby-gap ahead">+0 pts de vantagem</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </main>
+  </body>
+</html>

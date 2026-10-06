@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HunterTracker — Planos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="planos.css" rel="stylesheet" />
+</head>
+<body>
+<nav aria-label="Navegação principal">
+  <a href="dashboard.html" class="nav-logo">
+    <img src="img/logo-ht.png?v=2" alt="HunterTracker" class="ht-logo-icon" />
+    <span class="nav-brand">HUNTER<span>TRACKER</span></span>
+  </a>
+  <div class="nav-links">
+    <a href="campeonatos.html">Campeonatos</a>
+    <a href="rankings.html">Rankings</a>
+    <a href="perfil.html">Minha Conta</a>
+    <a href="planos.html" class="active" aria-current="page">Planos</a>
+  </div>
+</nav>
+<main class="page">
+  <div class="plans-header">
+    <div class="plans-eyebrow">Escolha seu plano</div>
+    <div class="plans-title">SIMPLES, <span>DIRETO</span> E JUSTO</div>
+    <div class="plans-sub">Comece grátis e faça upgrade quando quiser acompanhar os campeonatos que pagam.</div>
+  </div>
+  <!-- BILLING TOGGLE -->
+  <div class="billing-toggle">
+    <span class="bt-label active" id="lbl-monthly">Mensal</span>
+    <div class="toggle-track" id="billing-toggle">
+      <div class="toggle-thumb"></div>
+    </div>
+    <span class="bt-label" id="lbl-annual">Anual <span class="bt-save">-20%</span></span>
+  </div>
+  <!-- PLANS GRID -->
+  <div class="plans-grid">
+    <div class="plan-card">
+      <div class="plan-head">
+        <div class="plan-name">Gratuito</div>
+        <div class="plan-price-row">
+          <span class="plan-currency">R$</span>
+          <span class="plan-price">0</span>
+        </div>
+        <div class="plan-desc">Para quem quer acompanhar rankings e partidas sem custo.</div>
+      </div>
+      <div class="plan-cta">
+        <a class="btn-plan-free" href="dashboard.html">Plano Atual</a>
+      </div>
+      <div class="plan-divider"></div>
+      <div class="plan-features">
+        <div class="feature-section-label">Campeonatos</div>
+        <div class="feature-item">
+          <span class="fi-icon fi-check">✓</span>
+          Ver campeonatos ao vivo
+        </div>
+        <div class="feature-item">
+          <span class="fi-icon fi-check">✓</span>
+          Acompanhar partidas em tempo real
+        </div>
+        <div class="feature-item disabled">
+          <span class="fi-icon fi-lock">🔒</span>
+          Ver prize pools dos campeonatos
+          <span class="fi-tag fi-tag-pro">Pro</span>
+        </div>
+        <div class="feature-item disabled">
+          <span class="fi-icon fi-lock">🔒</span>
+          Rastrear campeonatos pagos
+          <span class="fi-tag fi-tag-pro">Pro</span>
+        </div>
+        <div class="feature-item disabled">
+          <span class="fi-icon fi-lock">🔒</span>
+          Alertas de inscrição aberta
+          <span class="fi-tag fi-tag-pro">Pro</span>
+        </div>
+        <div class="feature-section-label">Rankings & Perfil</div>
+        <div class="feature-item">
+          <span class="fi-icon fi-check">✓</span>
+          Ranking geral da plataforma
+        </div>
+        <div class="feature-item">
+          <span class="fi-icon fi-check">✓</span>
+          Histórico de partidas
+        </div>
+        <div class="feature-item disabled">
+          <span class="fi-icon fi-lock">🔒</span>
+          Rankings por jogo/região
+          <span class="fi-tag fi-tag-pro">Pro</span>
+        </div>
+        <div class="feature-section-label">Suporte</div>
+        <div class="feature-item">
+          <span class="fi-icon fi-check">✓</span>
+          Suporte via comunidade
+        </div>
+      </div>
+    </div>
+    <div class="plan-card popular">
+      <div class="popular-ribbon">⚡ Mais Popular</div>
+      <div class="plan-head">
+        <div class="plan-name">Pro</div>
+        <div class="plan-price-row">
+          <span class="plan-currency">R$</span>
+          <span class="plan-price" id="pro-price">25</span>
+          <span class="plan-period" id="pro-period">/mês</span>
+        </div>
+        <div class="plan-desc">Para quem leva gaming a sério e quer rastrear onde o dinheiro está.</div>
+        <div class="feature-highlight">
+          <span class="fh-icon">🏆</span>
+          <div>
+            <div class="fh-title">Rastreio de Campeonatos Pagos</div>
+            <div class="fh-sub">Veja prize pools, filtre por valor mínimo e receba alertas de inscrição</div>
+          </div>
+        </div>
+      </div>
+      <div class="plan-cta">
+        <a class="btn-plan-pro" href="cadastro.html">Assinar Pro — R$25/mês</a>
+      </div>
+      <div class="plan-divider"></div>
+      <div class="plan-features">
+        <div class="feature-section-label">Tudo do Gratuito, mais:</div>
+        <div class="feature-item">
+          <span class="fi-icon fi-check">✓</span>
+          <strong>Ver prize pools</strong> de todos os campeonatos
+        </div>
+        <div class="feature-item">
+          <span class="fi-icon fi-check">✓</span>
+          <strong>Rastrear</strong> campeonatos que pagam em dinheiro
+          <span class="fi-tag fi-tag-new">Destaque</span>
+        </div>
+        <div class="feature-item">
+          <span class="fi-icon fi-check">✓</span>
+          Alertas de inscrição por e-mail / push
+        </div>
+        <div class="feature-item">
+          <span class="fi-icon fi-check">✓</span>
+          Filtro por prize pool mínimo
+        </div>
+        <div class="feature-section-label">Rankings & Análise</div>
+        <div class="feature-item">
+          <span class="fi-icon fi-check">✓</span>
+          Rankings por jogo, região e skill
+        </div>
+        <div class="feature-item">
+          <span class="fi-icon fi-check">✓</span>
+          Análise detalhada de K/D e win rate
+        </div>
+        <div class="feature-item">
+          <span class="fi-icon fi-check">✓</span>
+          Exportar histórico de partidas
+          <span class="fi-tag fi-tag-new">Novo</span>
+        </div>
+        <div class="feature-section-label">Suporte</div>
+        <div class="feature-item">
+          <span class="fi-icon fi-check">✓</span>
+          Suporte prioritário via chat
+        </div>
+        <div class="feature-item">
+          <span class="fi-icon fi-check">✓</span>
+          Badge Pro exclusivo no perfil
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- COMPARISON TABLE -->
+  <div class="compare-section">
+    <div class="compare-title">Comparação Detalhada</div>
+    <div class="compare-table">
+      <div class="ct-head">
+        <span>Recurso</span>
+        <span class="free-col">Gratuito</span>
+        <span class="pro-col">Pro</span>
+      </div>
+      <div class="ct-group">Campeonatos</div>
+      <div class="ct-row">
+        <div class="ct-feat">Ver campeonatos ao vivo</div>
+        <div class="ct-check">✅</div>
+        <div class="ct-check">✅</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-feat">Ver prize pool dos campeonatos<small>Quanto cada torneio paga</small></div>
+        <div class="ct-check">🔒</div>
+        <div class="ct-check" style="color:var(--cyan)">✅</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-feat">Rastrear campeonatos pagos<small>Lista filtrada por torneios com premiação</small></div>
+        <div class="ct-check">🔒</div>
+        <div class="ct-check" style="color:var(--cyan)">✅</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-feat">Alertas de inscrição aberta<small>Notificação antes de fechar inscrições</small></div>
+        <div class="ct-check">🔒</div>
+        <div class="ct-check" style="color:var(--cyan)">✅</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-feat">Filtro por prize pool mínimo</div>
+        <div class="ct-check">🔒</div>
+        <div class="ct-check" style="color:var(--cyan)">✅</div>
+      </div>
+      <div class="ct-group">Rankings</div>
+      <div class="ct-row">
+        <div class="ct-feat">Ranking geral da plataforma</div>
+        <div class="ct-check">✅</div>
+        <div class="ct-check">✅</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-feat">Rankings por jogo e região</div>
+        <div class="ct-check">🔒</div>
+        <div class="ct-check" style="color:var(--cyan)">✅</div>
+      </div>
+      <div class="ct-group">Perfil & Análise</div>
+      <div class="ct-row">
+        <div class="ct-feat">Histórico de partidas</div>
+        <div class="ct-check">✅</div>
+        <div class="ct-check">✅</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-feat">Análise avançada de estatísticas</div>
+        <div class="ct-check">🔒</div>
+        <div class="ct-check" style="color:var(--cyan)">✅</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-feat">Exportar dados</div>
+        <div class="ct-check">🔒</div>
+        <div class="ct-check" style="color:var(--cyan)">✅</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-feat">Badge Pro no perfil</div>
+        <div class="ct-check">—</div>
+        <div class="ct-check" style="color:var(--gold)">★</div>
+      </div>
+      <div class="ct-group">Suporte</div>
+      <div class="ct-row">
+        <div class="ct-feat">Suporte via comunidade</div>
+        <div class="ct-check">✅</div>
+        <div class="ct-check">✅</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-feat">Suporte prioritário via chat</div>
+        <div class="ct-check">—</div>
+        <div class="ct-check" style="color:var(--cyan)">✅</div>
+      </div>
+    </div>
+  </div>
+  <div class="faq-section">
+    <div class="faq-title">Dúvidas Frequentes</div>
+    <div class="faq-item">
+      <div class="faq-q open">
+        Posso cancelar a qualquer momento?
+        <span class="arrow">▾</span>
+      </div>
+      <div class="faq-a open">
+        Sim. Você pode cancelar quando quiser direto pelo painel. Seu acesso Pro continua até o fim do período pago — sem multa, sem cobrança extra.
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q open">
+        O que significa "campeonatos que pagam"?
+        <span class="arrow">▾</span>
+      </div>
+      <div class="faq-a open">
+        São torneios com prize pool em dinheiro — tanto campeonatos oficiais (VCT, CBLOL, ESL) quanto torneios independentes com premiação em reais ou dólares. No plano Pro você vê o valor exato de cada premiação e pode filtrar por valor mínimo.
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q open">
+        Quais formas de pagamento são aceitas?
+        <span class="arrow">▾</span>
+      </div>
+      <div class="faq-a open">
+        Cartão de crédito, débito e PIX. O pagamento é processado de forma segura e recorrente — no mensal, cobra todo mês. No anual, cobra uma vez ao ano com 20% de desconto.
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q open">
+        Tem período de teste?
+        <span class="arrow">▾</span>
+      </div>
+      <div class="faq-a open">
+        Sim — 7 dias grátis no Pro. Se cancelar antes do 7º dia, não cobra nada.
+      </div>
+    </div>
+  </div>
+  <!-- BOTTOM CTA -->
+  <div class="bottom-cta">
+    <div class="bc-title">PRONTO PRA <span>COMPETIR DE VERDADE?</span></div>
+    <div class="bc-sub">Veja onde está o dinheiro. Inscreva-se nos campeonatos certos. Comece agora.</div>
+    <div class="bc-price">R$25<small>/mês · cancele quando quiser</small></div>
+    <a href="cadastro.html" class="btn-cta-main">Assinar Pro — 7 dias grátis</a>
+    <div class="bc-note">Sem compromisso. Cancele antes do 7º dia e não paga nada.</div>
+  </div>
+</main>
+</body>
+</html>

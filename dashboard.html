@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HunterTracker — Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="dashboard.css" rel="stylesheet" />
+</head>
+<body>
+<!-- Navegação principal, presente em todas as páginas internas do site -->
+<nav aria-label="Navegação principal">
+  <a href="dashboard.html" class="nav-logo">
+    <img src="img/logo-ht.png?v=2" alt="HunterTracker" class="ht-logo-icon" />
+    <span class="nav-brand">HUNTER<span>TRACKER</span></span>
+  </a>
+  <div class="nav-search" role="search">
+    <svg width="11" height="11" fill="none" stroke="#7b8ab8" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <label for="nav-search-input" class="sr-only">Pesquisar jogador</label>
+    <input id="nav-search-input" type="text" placeholder="Pesquisar jogador..." />
+    <button class="nav-buscar" type="button">Buscar</button>
+  </div>
+  <div class="nav-links">
+    <a href="campeonatos.html">Campeonatos</a>
+    <a href="rankings.html">Rankings</a>
+    <a href="perfil.html">Minha Conta</a>
+    <a href="planos.html">Planos</a>
+  </div>
+</nav>
+<main class="page">
+  <!-- CAMPEONATOS EM DESTAQUE: cards grandes com os torneios mais relevantes do momento -->
+  <section aria-labelledby="destaque-label">
+  <h2 id="destaque-label" class="section-label">Campeonatos em Destaque</h2>
+  <div class="featured-grid">
+    <div class="featured-card">
+      <div class="featured-card-bg bg-val"></div>
+      <div class="featured-card-overlay"></div>
+      <div class="featured-badge">Ativo</div>
+      <div class="featured-live"><div class="live-dot"></div> AO VIVO</div>
+      <div class="featured-card-content">
+        <div class="featured-game-label">VALORANT</div>
+        <div class="featured-game-sub">Champions Regional — Rodada 4</div>
+        <div class="featured-prize">🏆 Prêmio: R$ 5.000</div>
+      </div>
+    </div>
+    <div class="featured-card">
+      <div class="featured-card-bg bg-fn"></div>
+      <div class="featured-card-overlay"></div>
+      <div class="featured-badge" style="background:var(--gold);color:#000;">Em breve</div>
+      <div class="featured-card-content">
+        <div class="featured-game-label">FORTNITE</div>
+        <div class="featured-game-sub">Battle Royale Cup — Inscrições abertas</div>
+        <div class="featured-prize">🏆 Prêmio: R$ 3.000</div>
+      </div>
+    </div>
+  </div>
+  </section>
+  <!-- CORPO PRINCIPAL -->
+  <div class="main-grid">
+    <!-- LEFT: LEADERBOARD -->
+    <section aria-labelledby="leaderboard-title">
+      <h2 id="leaderboard-title" class="section-title">Tabela de Classificação</h2>
+      <div class="lb-table">
+        <div class="lb-head">
+          <span>#</span><span>Time</span><span>Sub</span><span>Pontos</span><span>Vitórias</span><span>K/D</span>
+        </div>
+        <div class="lb-row top1">
+          <div class="lb-pos">1</div>
+          <div class="lb-team"><div class="lb-av">GT</div><div><div class="lb-name">GhostTeam</div><div class="lb-sub2">—</div></div></div>
+          <div class="lb-val">—</div><div class="lb-val pts">240</div><div class="lb-val">3</div><div class="lb-val"><span class="kd kd-h">4.1</span></div>
+        </div>
+        <div class="lb-row">
+          <div class="lb-pos">2</div>
+          <div class="lb-team"><div class="lb-av">AX</div><div><div class="lb-name">Apex Squad</div><div class="lb-sub2">—</div></div></div>
+          <div class="lb-val">—</div><div class="lb-val pts">180</div><div class="lb-val">2</div><div class="lb-val"><span class="kd kd-h">3.0</span></div>
+        </div>
+        <div class="lb-row">
+          <div class="lb-pos">3</div>
+          <div class="lb-team"><div class="lb-av">NX</div><div><div class="lb-name">NexForce</div><div class="lb-sub2">—</div></div></div>
+          <div class="lb-val">—</div><div class="lb-val pts">175</div><div class="lb-val">2</div><div class="lb-val"><span class="kd kd-m">3.3</span></div>
+        </div>
+        <div class="lb-row">
+          <div class="lb-pos">4</div>
+          <div class="lb-team"><div class="lb-av">VK</div><div><div class="lb-name">VoidKillers</div><div class="lb-sub2">—</div></div></div>
+          <div class="lb-val">—</div><div class="lb-val pts">158</div><div class="lb-val">1</div><div class="lb-val"><span class="kd kd-m">2.8</span></div>
+        </div>
+        <div class="lb-row">
+          <div class="lb-pos">5</div>
+          <div class="lb-team"><div class="lb-av">SR</div><div><div class="lb-name">StormRage</div><div class="lb-sub2">—</div></div></div>
+          <div class="lb-val">—</div><div class="lb-val pts">146</div><div class="lb-val">0</div><div class="lb-val"><span class="kd kd-m">2.5</span></div>
+        </div>
+        <div class="lb-row">
+          <div class="lb-pos">6</div>
+          <div class="lb-team"><div class="lb-av">DZ</div><div><div class="lb-name">DarkZone</div><div class="lb-sub2">—</div></div></div>
+          <div class="lb-val">—</div><div class="lb-val pts">145</div><div class="lb-val">0</div><div class="lb-val"><span class="kd kd-l">2.0</span></div>
+        </div>
+        <div class="lb-row mine">
+          <div class="lb-pos">8</div>
+          <div class="lb-team"><div class="lb-av">BC</div><div><div class="lb-name">Bicoibauduco</div><div class="lb-sub2">Pro Valorant</div></div></div>
+          <div class="lb-val">—</div><div class="lb-val pts">118</div><div class="lb-val">0</div><div class="lb-val"><span class="kd kd-h">3.2</span></div>
+        </div>
+      </div>
+      <!-- Bottom Stats -->
+      <div class="bottom-stats">
+        <div class="bstat">
+          <div class="bstat-icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div>
+            <div class="bstat-label">Partidas Jogadas</div>
+            <div class="bstat-val">240</div>
+            <div class="bstat-sub">▲ +12 esta semana</div>
+          </div>
+        </div>
+        <div class="bstat">
+          <div class="bstat-icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <div>
+            <div class="bstat-label">Taxa de K/D</div>
+            <div class="bstat-val">1.91</div>
+            <div class="bstat-sub">▲ +0.4 vs. média</div>
+          </div>
+        </div>
+        <div class="bstat">
+          <div class="bstat-icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+          </div>
+          <div>
+            <div class="bstat-label">Vitórias</div>
+            <div class="bstat-val">95</div>
+            <div class="bstat-sub">Taxa: 39.6%</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- RIGHT PANEL: resumo do jogador logado, campeonatos em que participa e feed de notificações recentes. -->
+    <aside class="right-panel" aria-label="Painel do jogador">
+      <!-- Player Profile -->
+      <div class="panel-card">
+        <div class="panel-card-title">
+          <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          Perfil do Jogador
+        </div>
+        <div class="profile-header">
+          <div class="profile-avatar">B</div>
+          <div>
+            <div class="profile-info-name">Bicoubauduco</div>
+            <div class="profile-info-tag">Pro Valorant · Ativo</div>
+          </div>
+        </div>
+        <div class="profile-stat-row">
+          <span class="profile-stat-label">Campeonatos</span>
+          <span class="profile-stat-val accent">18</span>
+        </div>
+        <div class="profile-stat-row">
+          <span class="profile-stat-label">Pontuação</span>
+          <span class="profile-stat-val accent">240</span>
+        </div>
+        <div class="profile-stat-row">
+          <span class="profile-stat-label">Kills</span>
+          <span class="profile-stat-val">626</span>
+        </div>
+        <div class="profile-stat-row">
+          <span class="profile-stat-label">Assistências</span>
+          <span class="profile-stat-val">233</span>
+        </div>
+        <div class="profile-stat-row">
+          <span class="profile-stat-label">Deaths</span>
+          <span class="profile-stat-val">328</span>
+        </div>
+        <div class="profile-stat-row">
+          <span class="profile-stat-label">Ranking Atual</span>
+          <span class="profile-stat-val accent">#8</span>
+        </div>
+      </div>
+      <!-- Active Championships -->
+      <div class="panel-card">
+        <div class="panel-card-title">
+          <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+          Campeonatos Ativos
+        </div>
+        <div class="champ-row">
+          <div class="champ-left">
+            <div class="champ-icon val">VL</div>
+            <div><div class="champ-name">Valorant Champions</div><div class="champ-date">Rodada 4 de 6</div></div>
+          </div>
+          <div style="text-align:right;">
+            <div class="champ-pts">118 pts</div>
+            <div class="champ-status status-live">Ao vivo</div>
+          </div>
+        </div>
+        <div class="champ-row">
+          <div class="champ-left">
+            <div class="champ-icon fn">FN</div>
+            <div><div class="champ-name">Fortnite Battle Cup</div><div class="champ-date">Início: 20/06/2026</div></div>
+          </div>
+          <div style="text-align:right;">
+            <div class="champ-pts">—</div>
+            <div class="champ-status status-up">Inscrito</div>
+          </div>
+        </div>
+        <div class="champ-row">
+          <div class="champ-left">
+            <div class="champ-icon cs">CS</div>
+            <div><div class="champ-name">CS2 Open Series</div><div class="champ-date">Finalizado · 10/06</div></div>
+          </div>
+          <div style="text-align:right;">
+            <div class="champ-pts">122 pts</div>
+            <div class="champ-status status-done">3° Lugar</div>
+          </div>
+        </div>
+      </div>
+      <!-- Notifications -->
+      <div class="panel-card">
+        <div class="panel-card-title">
+          <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          Notificações
+        </div>
+        <div class="notif-row">
+          <div class="notif-dot cyan"></div>
+          <div>
+            <div class="notif-text"><strong>GhostTeam</strong> subiu para o 1° lugar com 240 pontos</div>
+            <div class="notif-time">Agora mesmo</div>
+          </div>
+        </div>
+        <div class="notif-row">
+          <div class="notif-dot gold"></div>
+          <div>
+            <div class="notif-text">Inscrições abertas para o <strong>Fortnite Battle Cup</strong></div>
+            <div class="notif-time">Há 2 horas</div>
+          </div>
+        </div>
+        <div class="notif-row">
+          <div class="notif-dot green"></div>
+          <div>
+            <div class="notif-text">Você subiu para <strong>#8</strong> no ranking geral</div>
+            <div class="notif-time">Há 1 dia</div>
+          </div>
+        </div>
+        <div class="notif-row">
+          <div class="notif-dot cyan"></div>
+          <div>
+            <div class="notif-text">Nova rodada do <strong>Valorant Champions</strong> começa em 30 min</div>
+            <div class="notif-time">Há 1 dia</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+</main>
+</body>
+</html>

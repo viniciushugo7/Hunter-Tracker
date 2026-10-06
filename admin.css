@@ -1,0 +1,682 @@
+/* admin.css — estilos de admin.html */
+/* BASE: reset, cores, nav e botões (igual em todas as páginas) */
+/* Reset simples */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* ---- Design tokens (paleta de cores, usados em todas as páginas) ---- */
+:root {
+  --bg: #07091a;
+  --bg2: #0d1030;
+  --bg3: #111640;
+  --panel: rgba(10, 18, 60, 0.82);
+  --cyan: #00d4ff;
+  --blue: #1a4db5;
+  --borda: rgba(0, 212, 255, 0.12);
+  --borda2: rgba(0, 212, 255, 0.25);
+  --branco: #e8eaf6;
+  --cinza: #7b8ab8;
+  --verde: #22c55e;
+  --vermelho: #ef4444;
+  --gold: #ffd700;
+}
+html,
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--branco);
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+/* ---- Navbar compartilhada (usada em Dashboard, Campeonatos, Rankings, Perfil, Planos) ---- */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  height: 52px;
+  background: rgba(7, 9, 26, 0.96);
+  border-bottom: 1px solid var(--borda2);
+  backdrop-filter: blur(12px);
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+/* Marca "HT" */
+.nav-logo img.ht-logo-icon {
+  height: 30px;
+  width: auto;
+  display: block;
+}
+.nav-brand {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--branco);
+}
+.nav-brand span {
+  color: var(--cyan);
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.nav-links a {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: var(--cinza);
+  text-decoration: none;
+}
+.nav-links a:hover {
+  color: var(--branco);
+}
+.nav-links a.active {
+  color: var(--cyan);
+}
+.nav-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg3);
+  border: 1px solid var(--borda);
+  border-radius: 3px;
+  padding: 5px 8px;
+  width: 240px;
+}
+.nav-search input {
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--cinza);
+  font-size: 11px;
+  width: 100%;
+  font-family: "Inter", sans-serif;
+}
+.nav-search input::placeholder {
+  color: var(--cinza);
+}
+.nav-buscar {
+  background: var(--cyan);
+  color: #000;
+  border: none;
+  padding: 4px 12px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 2px;
+  font-family: "Rajdhani", sans-serif;
+}
+/* ---- Botão primário padrão (cyan), usado em CTAs de todas as páginas ---- */
+.btn-primary {
+  background: var(--cyan);
+  color: #000;
+  border: none;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: opacity 0.15s ease;
+}
+.btn-primary:hover {
+  opacity: 0.88;
+}
+/* ---- Painel/card padrão (fundo escuro translúcido com borda cyan sutil) ---- */
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--borda);
+  border-radius: 6px;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+/* Foco visível por teclado — obrigatório pra navegação acessível */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 2px;
+}
+/* ---- Versão HTML+CSS (sem JS): botões que viraram links ---- */
+a.btn-primary,
+a.btn-plan-free,
+a.btn-plan-pro {
+  display: block;
+  box-sizing: border-box;
+  text-align: center;
+  text-decoration: none;
+}
+a.btn-logout {
+  display: inline-block;
+  text-decoration: none;
+}
+/* ESTA PÁGINA */
+html,
+body {
+  font-family: "Inter", sans-serif;
+  background: #f4f6fb;
+  color: #1a2033;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+/* ---------- Layout geral: sidebar fixa + conteúdo ---------- */
+.admin-shell {
+  display: flex;
+  min-height: 100vh;
+}
+/* SIDEBAR */
+.admin-sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  background: #ffffff;
+  border-right: 1px solid #e4e8f2;
+  padding: 18px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.admin-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 6px 14px;
+  border-bottom: 1px solid #eef1f8;
+}
+.admin-logo img {
+  height: 22px;
+  width: auto;
+}
+.admin-logo .brand {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  color: #1a2033;
+}
+.admin-logo .brand span {
+  color: #2f6fed;
+}
+.admin-badge {
+  margin-left: auto;
+  background: #2f6fed;
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+.admin-sidebar nav {
+  position: static;
+  display: block;
+  height: auto;
+  padding: 0;
+  background: transparent;
+  border-bottom: none;
+  backdrop-filter: none;
+}
+.nav-section-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #9aa4bf;
+  margin: 4px 0 8px 8px;
+}
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #4b5570;
+  margin-bottom: 2px;
+}
+.nav-item:hover {
+  background: #f4f6fb;
+}
+.nav-item.active {
+  background: #eaf1ff;
+  color: #2f6fed;
+  font-weight: 600;
+}
+.nav-item svg {
+  flex-shrink: 0;
+}
+.nav-badge {
+  margin-left: auto;
+  background: #eef1f8;
+  color: #4b5570;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 1px 7px;
+  border-radius: 8px;
+}
+.nav-item.active .nav-badge {
+  background: #dbe8ff;
+  color: #2f6fed;
+}
+/* MAIN AREA */
+.admin-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.admin-topbar {
+  height: 56px;
+  background: #ffffff;
+  border-bottom: 1px solid #e4e8f2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 24px;
+}
+.admin-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.admin-user-info {
+  text-align: right;
+}
+.admin-user-name {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1a2033;
+}
+.admin-user-sub {
+  font-size: 10px;
+  color: #9aa4bf;
+}
+.admin-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #dbe8ff;
+  color: #2f6fed;
+  font-weight: 700;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-logout {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #4b5570;
+  border: 1px solid #e4e8f2;
+  border-radius: 6px;
+  padding: 6px 12px;
+  background: #fff;
+  cursor: pointer;
+}
+.btn-logout:hover {
+  border-color: #cbd4e8;
+}
+.admin-content {
+  padding: 24px 28px 40px;
+  max-width: 1320px;
+}
+.page-heading {
+  margin-bottom: 20px;
+}
+.page-heading h1 {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a2033;
+}
+.page-heading p {
+  font-size: 12px;
+  color: #9aa4bf;
+  margin-top: 2px;
+}
+/* STAT CARDS */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 18px;
+}
+.stat-card {
+  background: #fff;
+  border: 1px solid #e4e8f2;
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.stat-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.stat-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #9aa4bf;
+}
+.stat-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.stat-icon.blue {
+  background: #eaf1ff;
+  color: #2f6fed;
+}
+.stat-icon.green {
+  background: #e8faf0;
+  color: #17a865;
+}
+.stat-icon.orange {
+  background: #fff3e6;
+  color: #f5921b;
+}
+.stat-icon.purple {
+  background: #f2ecff;
+  color: #8654e0;
+}
+.stat-value {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #1a2033;
+  margin-top: 4px;
+}
+.stat-delta {
+  font-size: 11px;
+  color: #17a865;
+  margin-top: 4px;
+  font-weight: 600;
+}
+/* TWO COLUMN ROW */
+.two-col {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 14px;
+  margin-bottom: 14px;
+  align-items: start;
+}
+.panel {
+  background: #fff;
+  border: 1px solid #e4e8f2;
+  border-radius: 10px;
+  padding: 16px;
+}
+.panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.panel-head h2 {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #4b5570;
+}
+.panel-link {
+  font-size: 11px;
+  font-weight: 600;
+  color: #2f6fed;
+}
+/* Tabela de usuários recentes */
+table.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+.users-table thead th {
+  text-align: left;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #9aa4bf;
+  font-weight: 700;
+  padding: 6px 8px;
+  border-bottom: 1px solid #eef1f8;
+}
+.users-table tbody td {
+  padding: 9px 8px;
+  border-bottom: 1px solid #f4f6fb;
+  vertical-align: middle;
+}
+.user-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.user-avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.user-name {
+  font-weight: 600;
+  color: #1a2033;
+}
+.user-email {
+  font-size: 10px;
+  color: #9aa4bf;
+}
+.status-pill {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 20px;
+  display: inline-block;
+}
+.status-pill.online {
+  background: #e8faf0;
+  color: #17a865;
+}
+.status-pill.ausente {
+  background: #fff3e6;
+  color: #d9820b;
+}
+.status-pill.offline {
+  background: #f1f2f6;
+  color: #8a93ab;
+}
+/* Painel do Agente IA */
+.agent-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #17a865;
+  background: #e8faf0;
+  padding: 3px 9px;
+  border-radius: 20px;
+}
+.agent-status .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #17a865;
+}
+.agent-log {
+  background: #10162b;
+  color: #cfe0ff;
+  font-family: "Consolas", monospace;
+  font-size: 11px;
+  line-height: 1.6;
+  border-radius: 8px;
+  padding: 10px 12px;
+  max-height: 130px;
+  overflow-y: auto;
+  margin-bottom: 14px;
+}
+.agent-log .ok {
+  color: #4ade80;
+}
+.agent-log .sync {
+  color: #38bdf8;
+}
+.agent-log .time {
+  color: #6b7aa0;
+}
+.found-title {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #9aa4bf;
+  margin-bottom: 8px;
+}
+.found-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #f4f6fb;
+}
+.found-item:last-child {
+  border-bottom: none;
+}
+.found-name {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1a2033;
+}
+.found-sub {
+  font-size: 10px;
+  color: #9aa4bf;
+}
+.tag-live,
+.tag-soon {
+  font-size: 9px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 20px;
+  flex-shrink: 0;
+}
+.tag-live {
+  background: #ffe9e9;
+  color: #e0393e;
+}
+.tag-soon {
+  background: #f1f2f6;
+  color: #8a93ab;
+}
+/* THREE COLUMN ROW */
+.three-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 14px;
+}
+/* Gráfico de barras simples (CSS puro, sem lib) */
+.bar-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  height: 90px;
+  margin-bottom: 10px;
+}
+.bar-chart .bar {
+  flex: 1;
+  background: #bcd4ff;
+  border-radius: 3px 3px 0 0;
+}
+.bar-chart .bar.peak {
+  background: #2f6fed;
+}
+.bar-labels {
+  display: flex;
+  gap: 8px;
+  font-size: 9px;
+  color: #9aa4bf;
+  margin-bottom: 10px;
+}
+.bar-labels span {
+  flex: 1;
+  text-align: center;
+}
+.chart-value {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a2033;
+}
+.chart-delta {
+  font-size: 11px;
+  color: #17a865;
+  font-weight: 600;
+}
+/* Listas chave/valor (saúde do sistema, novos cadastros) */
+.kv-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.kv-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+}
+.kv-label {
+  color: #6b7690;
+}
+.kv-value {
+  font-weight: 700;
+  color: #1a2033;
+}
+.kv-value.good {
+  color: #17a865;
+}
+@media (max-width: 980px) {
+  .stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .two-col,
+  .three-col {
+    grid-template-columns: 1fr;
+  }
+}
